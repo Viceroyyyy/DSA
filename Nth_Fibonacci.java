@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Solution {
+public class Nth_Fibonacci {
 
 
 	public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class Solution {
 		else
 		System.out.println(""+fibn);
 
-		
+		Solution.close();
 	}
 
 }
