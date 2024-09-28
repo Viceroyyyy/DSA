@@ -4,6 +4,10 @@ public class largeSmallSum {
     public static int calculateLargeSmallSum(int arr[]){
        int secondLar = Integer.MIN_VALUE,largest = Integer.MIN_VALUE;
        int smallest = Integer.MAX_VALUE, secondSmall = Integer.MAX_VALUE;
+       
+       if(arr.length == 0 || arr.length<=3)
+       return 0;
+
         for(int i=0; i<arr.length;i++){
             if(i%2==0){
                 if(arr[i]>largest ){
