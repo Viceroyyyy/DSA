@@ -10,4 +10,9 @@ public class Triangle {
             System.out.print("\n");
         }
     }
+
+    public static void main(String[] args) {
+        int n = 5;  // You can set this to any number you'd like
+        Triangle.nTriangle(n);
+    }
 }
