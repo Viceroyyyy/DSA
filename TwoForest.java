@@ -1,4 +1,4 @@
-public class Solution {
+public class TwoForest {
     public static void nForest(int n) {
         // Write your code here
         for(int i=0;i<n;i++)
@@ -9,5 +9,11 @@ public class Solution {
             }
             System.out.print("\n");
         }
+    }
+
+    public static void main(String[] args) {
+        // Example usage: print a forest with 5 rows
+        int n = 5;
+        nForest(n);
     }
 }
