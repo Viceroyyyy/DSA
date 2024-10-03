@@ -1,4 +1,4 @@
-public class Solution {
+public class SymmetricVoid {
     public static void symmetry(int n) {
         for(int i=0;i<n;i++)
         {   
@@ -34,5 +34,10 @@ public class Solution {
             System.out.print("\n");
 
         }
+    }
+
+    public static void main(String[] args) {
+        int n = 5;  // You can change this value to test with different sizes
+        symmetry(n);
     }
 }
