@@ -33,4 +33,10 @@ public class Solution {
             System.out.print("\n");
             }
     }
+
+    public static void main(String[] args) {
+        // Example usage: generate symmetry pattern with n = 5
+        int n = 5;
+        symmetry(n);
+    }
 }
