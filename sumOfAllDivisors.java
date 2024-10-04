@@ -1,5 +1,5 @@
 import java.util.*;
-public class Solution {
+public class sumOfAllDivisors {
         // public static int findDiv(int num){
         //     int summation=0,k=0;
         //     for(int j=1;j<=Math.sqrt(num);j++)
@@ -15,7 +15,7 @@ public class Solution {
         //     return summation;
 
         // }
-        public static int sumOfAllDivisors(int n){
+        public static long sumOfAllDivisors(long N){
         // int sum=1;
         // for(int i=2;i<=n;i++)
         // {
@@ -23,16 +23,26 @@ public class Solution {
         // }
         // return sum;
        
-    int ans = 0;
-    int l = 1;
-    while (l <= n) {
-        int val = n / l;
-        int r = n / val;
-        int sum = (r * (r + 1)) / 2 - (l * (l - 1)) / 2;
-        ans += sum * val;
-        l = r + 1;
-    }
-    return ans;
+        
+            long sum = 0;
+            for(long i=1;i<=N;i++)
+            {
+                sum+=i*(N/i);
+            }
+            return sum;
+        
 
+        }
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter the number to find out Sum Of All Divisors: ");
+            long num = sc.nextLong();
+
+            System.out.println("Sum of All Divisors is: "+sumOfAllDivisors(num));
+
+            sc.close();
+
+            
         }
 }
