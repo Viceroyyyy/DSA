@@ -1,4 +1,4 @@
-public class Solution {
+public class ReverseStarTriangle {
     public static void nStarTriangle(int n) {
         // Write your code here
         for(int i=0;i<n;i++)
@@ -17,5 +17,10 @@ public class Solution {
             // }
             System.out.print("\n");
         }
+    }
+    public static void main(String[] args) {
+        // Test the nStarTriangle method with n = 5
+        int n = 5;
+        nStarTriangle(n);
     }
 }
