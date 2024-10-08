@@ -1,4 +1,4 @@
-public class Solution {
+public class Symmetry {
     public static void symmetry(int n) {
         for(int i=1;i<=n;i++)
         {
