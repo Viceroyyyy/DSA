@@ -1,5 +1,5 @@
 public class countDigits {
-    public static int countDigits(int n){
+    public static int CountDigits(int n){
         // Write your code here.
         int a=n,count=0,dig=0;
         while(a>0)
@@ -14,7 +14,7 @@ public class countDigits {
 
 public static void main(String[] args) {
     int number = 1012; // You can change this number to test other cases
-    int result = countDigits(number);
+    int result = CountDigits(number);
     System.out.println("The number of digits in " + number + " that divide it is: " + result);
 }
 }
