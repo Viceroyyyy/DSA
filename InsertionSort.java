@@ -1,12 +1,10 @@
 public class InsertionSort {
     static void insert(int arr[],int i)
   {
-       for(int j=i;j>=1;j--){
-           if(arr[j]<arr[j-1]){
+       for(int j=i;j>=1 && arr[j]<arr[j-1];j--){  
                int temp = arr[j];
                arr[j] = arr[j-1];
                arr[j-1] = temp;
-           }
        }
   }
   //Function to sort the array using insertion sort algorithm.
