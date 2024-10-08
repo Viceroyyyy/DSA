@@ -7,7 +7,7 @@ public class ratCount{
             if (arr.length == 0)
                 return -1;
     
-            int count = 0;
+            // int count = 0;
             int sum = 0;
             int i;
             for (i = 0; i < arr.length; i++) {
