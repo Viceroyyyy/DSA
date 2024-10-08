@@ -15,7 +15,7 @@ public class sumOfAllDivisors {
         //     return summation;
 
         // }
-        public static long sumOfAllDivisors(long N){
+        public static long SumOfAllDivisors(long N){
         // int sum=1;
         // for(int i=2;i<=n;i++)
         // {
@@ -39,7 +39,7 @@ public class sumOfAllDivisors {
             System.out.println("Enter the number to find out Sum Of All Divisors: ");
             long num = sc.nextLong();
 
-            System.out.println("Sum of All Divisors is: "+sumOfAllDivisors(num));
+            System.out.println("Sum of All Divisors is: "+SumOfAllDivisors(num));
 
             sc.close();
 
