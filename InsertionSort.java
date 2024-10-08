@@ -1,18 +1,19 @@
 public class InsertionSort {
-    static void insert(int arr[],int i)
-  {
-       for(int j=i;j>=1 && arr[j]<arr[j-1];j--){  
-               int temp = arr[j];
-               arr[j] = arr[j-1];
-               arr[j-1] = temp;
-       }
-  }
+    
   //Function to sort the array using insertion sort algorithm.
-  public void insertionSort(int arr[], int n)
-  {
-      for(int i=0;i<n;i++){
-          insert(arr,i);
-      }
+  public void insertionSort(int arr[], int i)
+  { 
+    if(i==arr.length)
+      return ;
+          
+          for(int j=i;j>=1 && arr[j]<arr[j-1];j--){  
+            int temp = arr[j];
+            arr[j] = arr[j-1];
+            arr[j-1] = temp;
+    }
+      
+
+      insertionSort(arr, i+1);
   }
 
   public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class InsertionSort {
     InsertionSort sorter = new InsertionSort();
 
     // Call the insertionSort method
-    sorter.insertionSort(arr, arr.length);
+    sorter.insertionSort(arr, 0);
 
     // Print the sorted array
     System.out.println("Sorted array:");
