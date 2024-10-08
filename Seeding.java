@@ -1,4 +1,4 @@
-public class Solution {
+public class Seeding {
     public static void seeding(int n) {
         // Write your code here
         for(int i=0;i<n;i++)
