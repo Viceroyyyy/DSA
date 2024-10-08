@@ -30,5 +30,6 @@ public class rangedPalindrome {
                 System.out.println(""+i+", ");
             }
         }
+        sc.close();
     }
 }
