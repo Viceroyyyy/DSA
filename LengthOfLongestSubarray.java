@@ -15,7 +15,7 @@ public class LengthOfLongestSubarray {
         //Problem with this approach
 
         //Problem with this is approach is that in best Case it will take O(NlogN) time  but in the Worst case where the hashMap will have Multiple Collisions then this approach will take an O(N^2) time.
-        
+        //Note:- This approach is not optimal for Only Positive but for BOTH POSITIVE AND NEGATIVE ELEMENTS THIS IS THE OPTIMAL APPROACH
         //--------------------------------------------------------------------------------------------------------------------------------
         
         // HashMap<Integer,Integer> map = new HashMap<>();
@@ -44,7 +44,9 @@ public class LengthOfLongestSubarray {
 
         //------------------------------------------------------------------------------------------------------------------------------
 
-        //Optimal Solution includes Sliding Window approach where we use two pointers
+        //Optimal Solution includes Sliding Window approach where we use two pointers but this APPROACH IS ONLY FOR POSITIVE NUMBERS NOT NEGATIVE NUMBERS 
+
+        //Time Complexity for this solution will be O(2N) and space Complexity would be O(1) since no extra space is taken.
         int left=0,right=0;
         int maxLen = 0;
         int sum = A[0];
