@@ -1,4 +1,4 @@
-public class Solution {
+public class GCDorHCF {
     public static int calcGCD(int n, int m){
         // Write your code here.
          int Q,div;
@@ -23,5 +23,12 @@ public class Solution {
         }
     }
     return Q;
+    }
+    public static void main(String[] args) {
+        int num1 = 56; // You can change the values here for testing
+        int num2 = 98;
+
+        int result = calcGCD(num1, num2);
+        System.out.println("The GCD of " + num1 + " and " + num2 + " is: " + result);
     }
 }
