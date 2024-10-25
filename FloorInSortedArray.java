@@ -5,7 +5,7 @@ public class FloorInSortedArray {
         
         int left = 0;
         int right = n-1;
-        long max = Long.MIN_VALUE;
+        // long max = Long.MIN_VALUE;
         int index = 0;
         while(left<=right){
             int mid = (left+right)/2;
