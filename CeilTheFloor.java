@@ -5,8 +5,7 @@ public class CeilTheFloor {
         
         int[] nums = new int[2];
         // code here
-        int floor=0;
-        int ceil = 0;
+
         Arrays.sort(arr);
         if(arr[0]>x)
         nums[0] = -1;
@@ -17,7 +16,7 @@ public class CeilTheFloor {
         int left = 0;
         int right = arr.length-1;
         
-        int index = 0;
+        
         while(left<=right){
             int mid = (left+right)/2;
             
