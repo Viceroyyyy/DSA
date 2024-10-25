@@ -1,4 +1,4 @@
-public class Solution {
+public class NinjaAndTheNumberPattern {
     public static void getNumberPattern(int n) {
         int l=n;
         for(int i=0;i<n;i++)
@@ -42,5 +42,9 @@ public class Solution {
             }
             System.out.print("\n");
         }
+        }
+        public static void main(String[] args) {
+            int n = 5;  // Change this value to test with different inputs
+            getNumberPattern(n);
         }
 }
