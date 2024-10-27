@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class CheckArmstrong {
 	
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -25,6 +25,6 @@ public class Main {
 		else
 		System.out.println("false");
 		
-
+		sc.close();
 	}
 }
