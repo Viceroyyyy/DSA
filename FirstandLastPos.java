@@ -2,42 +2,81 @@ import java.util.Arrays;
 
 public class FirstandLastPos {
     public int[] searchRange(int[] nums, int target) {
+
+        //Better Solution although takes O(n) time
+
         int[] arr = new int[2];
 
-        int left = Integer.MIN_VALUE,right = -1;
+        // int left = Integer.MIN_VALUE,right = -1;
 
-        int l = 0,r=nums.length-1;
+        // int l = 0,r=nums.length-1;
         
-        while(l<=r){
-            int mid = (l + r)/2;
+        // while(l<=r){
+        //     int mid = (l + r)/2;
             
-            if(target==nums[mid]){
-                left = mid;
-                right = mid;
-                while(left>=0 && nums[left]==target){
-                    left--;
-                }
+        //     if(target==nums[mid]){
+        //         left = mid;
+        //         right = mid;
+        //         while(left>=0 && nums[left]==target){
+        //             left--;
+        //         }
 
-                while(right<nums.length && nums[right]==target){
-                    right++;
-                }
-                break;
+        //         while(right<nums.length && nums[right]==target){
+        //             right++;
+        //         }
+        //         break;
+        //     }
+        //     else if(target>nums[mid]){
+        //         l = mid+1;
+        //     }
+        //     else{
+        //         r = mid-1;
+        //     }
+        // }
+
+        // if(left!=Integer.MIN_VALUE){
+        //     arr[0] = left+1;
+        //     arr[1] = right-1;
+        // }else{
+        //     arr[0] = -1;
+        //     arr[1] = -1;
+        // }
+
+        // return arr;
+
+        int left = 0, right = nums.length - 1;
+        int index = -1;
+        while(left <= right){
+            int mid = (left + right)/2;
+
+            if(target == nums[mid]){
+                index = mid;
+                left = mid + 1;
+            }else if(target > nums[mid]){
+                left = mid+1;
+            }else{
+                right = mid-1;
             }
-            else if(target>nums[mid]){
-                l = mid+1;
-            }
-            else{
-                r = mid-1;
+        }
+        arr[1] = index;
+        left = 0;
+        right = nums.length-1;
+        index = -1;
+
+        while(left <= right){
+            int mid = (left + right)/2;
+
+            if(target == nums[mid]){
+                index = mid;
+                right = mid - 1;
+            }else if(target > nums[mid]){
+                left = mid+1;
+            }else{
+                right = mid-1;
             }
         }
 
-        if(left!=Integer.MIN_VALUE){
-            arr[0] = left+1;
-            arr[1] = right-1;
-        }else{
-            arr[0] = -1;
-            arr[1] = -1;
-        }
+        arr[0] = index;
 
         return arr;
     }
