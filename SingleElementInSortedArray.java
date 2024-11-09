@@ -1,7 +1,7 @@
 public class SingleElementInSortedArray {
     public int singleNonDuplicate(int[] nums) {
         int left = 0,right = nums.length-1;
-        int n = nums.length-1;
+        // int n = nums.length-1;
         if(nums.length==1)
         return nums[0];
         else
