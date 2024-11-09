@@ -1,6 +1,6 @@
 public class FindtheSmallestDivisorGivenaThreshold {
     public int smallestDivisor(int[] nums, int threshold) {
-        int max = Integer.MIN_VALUE;
+        // int max = Integer.MIN_VALUE;
         // for(int i: nums) max = Math.max(max,i);
 
         int left = 1,right = 1000000;
