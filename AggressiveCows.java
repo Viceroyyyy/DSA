@@ -39,21 +39,21 @@ public class AggressiveCows {
         }
 
         public static void main(String[] args) {
-            AggressiveCows solution = new AggressiveCows();
+            
     
             // Test case 1
             int[] stalls1 = {1, 2, 4, 8, 9};
             int k1 = 3;
-            System.out.println("Largest minimum distance for " + k1 + " cows: " + solution.aggressiveCows(stalls1, k1));
+            System.out.println("Largest minimum distance for " + k1 + " cows: " + aggressiveCows(stalls1, k1));
     
             // Test case 2
             int[] stalls2 = {1, 2, 8, 4, 9};
             int k2 = 3;
-            System.out.println("Largest minimum distance for " + k2 + " cows: " + solution.aggressiveCows(stalls2, k2));
+            System.out.println("Largest minimum distance for " + k2 + " cows: " + aggressiveCows(stalls2, k2));
     
             // Test case 3
             int[] stalls3 = {1, 3, 5, 9, 12};
             int k3 = 4;
-            System.out.println("Largest minimum distance for " + k3 + " cows: " + solution.aggressiveCows(stalls3, k3));
+            System.out.println("Largest minimum distance for " + k3 + " cows: " + aggressiveCows(stalls3, k3));
         }
 }
