@@ -110,16 +110,59 @@ public class LLImplementation {
     }
 
     public Node insertHead(int data){
-
+        return new Node(data);
     }
-    public Node insertTail(int data){
+    public Node insertTail(Node Head,int data){
+        if(Head == null) return new Node(data);
+        Node temp = Head;
+    
+        while(temp.next!=null){
+            temp = temp.next;
+        }
 
+        Node newNode = new Node(data);
+        temp.next = newNode;
+        
+        return Head;
     }
-    public Node insertPos(Node head,int k,int data){
 
+    public Node insertPos(Node Head,int k,int data){
+        Node newNode = new Node(data);
+
+        if(Head==null) return newNode;
+
+        if(k==1){
+            newNode.next = Head;
+            Head = newNode;
+            return Head;
+        }
+
+        Node temp = Head;
+        int count = 1;
+
+        while(count<k-1 && temp.next!=null){
+            temp = temp.next;
+            count++;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+
+        return Head;
     }
-    public Node insertVal(Node head,int val,int data){
+    public Node insertAfterVal(Node Head,int val,int data){
+        Node newNode = new Node(data);
 
+        Node temp = Head;
+
+        while(temp.data!=val && temp.next!=null){
+            temp = temp.next;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+
+        return Head;
     }
     
     public static void main(String[] args) {
@@ -127,7 +170,7 @@ public class LLImplementation {
         LLImplementation ll = new LLImplementation();
         
         Node head = ll.ConvertArrtoLL(arr);
-        // ll.printll(head);
+        ll.printll(head);
 
         head = ll.deleteHead(head);
         ll.printll(head);
@@ -151,14 +194,17 @@ public class LLImplementation {
         Head = ll.insertHead(100);
         ll.printll(Head);
 
-        Head = ll.insertTail(200);
-        Head = ll.insertTail(300);
+        Head = ll.insertTail(Head,200);
+        Head = ll.insertTail(Head,300);
         ll.printll(Head);
 
-        Head = ll.insertPos(Head, 3,500);
+        Head = ll.insertPos(Head, 4,500);
         ll.printll(Head);
 
-        Head = ll.insertVal(Head,300,400);
+        Head = ll.insertAfterVal(Head,300,400);
+        ll.printll(Head);
+
+        Head = ll.insertAfterVal(Head,500,600);
         ll.printll(Head);
     }
 }
