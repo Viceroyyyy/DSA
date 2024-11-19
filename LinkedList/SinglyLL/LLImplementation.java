@@ -129,9 +129,9 @@ public class LLImplementation {
     public Node insertPos(Node Head,int k,int data){
         Node newNode = new Node(data);
 
-        if(Head==null) return newNode;
-
         if(k==1){
+            if(Head==null) return newNode;
+
             newNode.next = Head;
             Head = newNode;
             return Head;
