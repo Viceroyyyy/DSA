@@ -10,7 +10,7 @@ class Node {
     }
 }
 
-public class DLLInsertionAtGivenPos {
+public class DLLInsertionAtGivenPos{
     Node addNode(Node head, int p, int x) {
         Node newNode = new Node(x);
 
